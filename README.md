@@ -1,5 +1,15 @@
-## `lsp-client`: a rust client for the [language-server-protocol](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md).
+How long does it take rust-analyzer to autocomplete from 32k items?
 
-This software is **experimental**, and in no way ready for use. However, it may be useful as an example, and it may become more useful over time.
+It's 10s from Emacs with lsp-mode ([details](https://gist.github.com/lynaghk/e5cca329418e32b0644ef209d8194895)) so I threw this code together to test rust-analyzer itself.
 
-This project exists to provide a framework for experimenting with plugin support in the [xi editor](https://github.com/google/xi-editor).
+On my M1 MacBook Air with 16 GB of RAM,
+
+    rust-analyzer 0.3.1203-standalone (2e9f1204c 2022-09-11)
+
+takes about 3s.
+
+Run it yourself via:
+
+    cargo run --release
+
+See also the [discussion thread on Rust User Forum](https://users.rust-lang.org/t/how-many-symbols-can-rust-analyzer-autocomplete-in-practice/81400).
